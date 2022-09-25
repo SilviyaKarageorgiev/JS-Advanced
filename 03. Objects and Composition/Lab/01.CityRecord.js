@@ -1,5 +1,5 @@
 function solve(cityName, population, treasury){
-    var city = {
+    let city = {
         name: cityName,
         population: population,
         treasury: treasury
