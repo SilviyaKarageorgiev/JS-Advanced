@@ -1,33 +1,32 @@
 function solve(input){
 
-    let townData = input
-        .map(element => {
-            let data = element.split(' <-> ');
-            return {
-                name: data[0],
-                population: Number(data[1])
-        };
-    })
-        .reduce((result, town) => {
-            if(result[town.name] === undefined){
-                result[town.name] = town.population;
-            } else {
-                result[town.name] += town.population;
-            }
-            return result;
-        }, {});
+    const result = {};
 
-        for(let town in townData){
-            console.log(`${town} : ${townData[town]}`);
-        }
-            
-        }
+    for(const town of input){
+        const tokens = town.split(' <-> ');
+        const name = tokens[0];
+        let population = Number(tokens[1]);
 
-    
+        if(result[name] != undefined){
+            population += result[name];
+        }
+        result[name] = population;
+    }
+
+    for (let [name, population] of Object.entries(result)){
+        console.log(`${name} : ${population}`);
+    }
+
+}
 
 solve(['Sofia <-> 1200000',
 'Montana <-> 20000',
 'New York <-> 10000000',
 'Washington <-> 2345000',
-'Las Vegas <-> 1000000']
-);
+'Las Vegas <-> 1000000']);
+
+solve(['Istanbul <-> 100000',
+'Honk Kong <-> 2100004',
+'Jerusalem <-> 2352344',
+'Mexico City <-> 23401925',
+'Istanbul <-> 1000']);
