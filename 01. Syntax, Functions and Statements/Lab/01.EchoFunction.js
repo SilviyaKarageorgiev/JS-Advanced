@@ -1,6 +1,8 @@
-function solve (text){
-    console.log(text.length);
-    console.log(text);
+function solve(input) {
+    
+    console.log(input.length);
+    console.log(input);
 }
 
 solve('Hello, JavaScript!');
+solve('strings are easy');

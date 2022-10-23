@@ -1,17 +1,8 @@
-function largestNumber(num1, num2, num3){
+function solve(num1, num2, num3) {
 
-    let largest;
-
-    if(num1 > num2 && num1 > num3){
-        largest = num1;
-    } else if(num2 > num1 && num2 > num3){
-        largest = num2;
-    } else{
-        largest = num3;
-    }
-
-    console.log(`The largest number is ${largest}.`)
+    let result = Math.max(num1, num2, num3);
+    console.log(`The largest number is ${result}.`);
 }
 
-largestNumber(5, -3, 16);
-largestNumber(-3, -5, -22.5);
+solve(5, -3, 16);
+solve(-3, -5, -22.5);

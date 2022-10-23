@@ -1,10 +1,11 @@
-function stringLengthAndAverage(str1, str2, str3){
-    let count = 0;
-    count = str1.length + str2.length + str3.length;
+function solve(str1, str2, str3) {
 
-    console.log(count);
-    console.log(Math.floor(count / 3));
+    let sum = str1.length + str2.length + str3.length;
+    let average = sum / 3;
+
+    console.log(sum);
+    console.log(Math.floor(average));
 }
 
-stringLengthAndAverage('chocolate', 'ice cream', 'cake');
-stringLengthAndAverage('pasta', '5', '22.3');
+solve('chocolate', 'ice cream', 'cake');
+solve('pasta', '5', '22.3');
