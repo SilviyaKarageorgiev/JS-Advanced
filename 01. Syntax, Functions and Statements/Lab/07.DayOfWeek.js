@@ -1,8 +1,8 @@
-function dayOfWeek(input){
+function dayOfWeek(input) {
 
     let result;
 
-    switch(input){
+    switch (input) {
         case 'Monday': result = 1; break;
         case 'Tuesday': result = 2; break;
         case 'Wednesday': result = 3; break;

@@ -1,8 +1,8 @@
-function solve(input){
-    0;
+function solve(input) {
+
     let array = input.map(Number);
     let sumArray = array.reduce((total, current) => total + current);
-    let sumInverse = array.reduce((total, current) => total + 1/current, 0);
+    let sumInverse = array.reduce((total, current) => total + 1 / current, 0);
     let concatElements = array.join('');
 
     console.log(sumArray);

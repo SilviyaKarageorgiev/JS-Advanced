@@ -1,6 +1,6 @@
-function square(input = 5){
+function square(input = 5) {
 
-    for(i = 0; i < input; i++){
+    for (i = 0; i < input; i++) {
 
         console.log('* '.repeat(input));
     }
