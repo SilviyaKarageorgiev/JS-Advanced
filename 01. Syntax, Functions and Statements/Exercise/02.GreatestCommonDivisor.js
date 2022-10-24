@@ -1,23 +1,13 @@
 function solve(num1, num2) {
 
-    let commonDevisor;
-    let biggerNum;
-    
-    if  (num1 > num2){
-        biggerNum = num1;
-    } else {
-        biggerNum = num2;
-    }
+  let maxNum = Math.max(num1, num2);
 
-    for (let index = biggerNum; index > 0; index--) {
-        
-        if(num1 % index === 0 && num2 % index === 0) {
-            commonDevisor = index;
-            break;
-        }
-    }
+  for (let i = maxNum; i > 0; i--) {
 
-    return commonDevisor;
+    if (num1 % i === 0 && num2 % i === 0) {
+      return i;
+    }
+  }
 }
 
 console.log(solve(15, 5));
