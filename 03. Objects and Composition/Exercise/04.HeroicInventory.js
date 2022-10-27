@@ -22,13 +22,11 @@ function solve2(input) {
 
     for (const hero of input) {
         let obj = {};
+
         let [name, level, items] = hero.split(' / ');
         obj.name = name;
         obj.level = Number(level);
-        obj.items = [];
-        if (items !== undefined) {
-            obj.items = items.split(', ');
-        }
+        items !== undefined ? obj.items = items.split(', ') : obj.items = [];
 
         data.push(obj);
     }
