@@ -34,7 +34,7 @@ class SmartHike {
             this.listOfHikes.push({ peak, time, difficultyLevel });
             return `You hiked ${peak} peak for ${time} hours and you have ${this.resources}% resources left`;
         }
-        
+
     }
 
     rest(time) {
@@ -65,7 +65,7 @@ class SmartHike {
             return `${this.username}'s best ${criteria} hike is ${bestHike.peak} peak, for ${bestHike.time} hours`;
         }
 
-        if(criteria == 'all'){
+        if (criteria == 'all') {
 
             let report = ['All hiking records:'];
 
